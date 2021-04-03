@@ -13,8 +13,19 @@ def two_number_sum_bruteForce(lst, targetSum):
         for j in range(i+1, len(lst)):
             if(lst[i] + lst[j] == 10):
                 result.append([lst[i],lst[j]])
+    
+    return result
 
+def two_number_sum_hashTableApproach(lst, targetSum):
+    hash_table = {}
 
+    for x in range(len(lst)):
+        if targetSum - lst[x] in hash_table:
+            return [lst[x], targetSum-lst[x]]
+        else:
+            hash_table[lst[x]] = True
+
+    return []
 
 def two_number_sum_twoPointersApproach(lst, targetSum):
     if(len(lst) < 2):
