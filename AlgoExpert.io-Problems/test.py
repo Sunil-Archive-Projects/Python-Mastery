@@ -13,7 +13,7 @@ def solve (n, a):
                 return 0
         sum = 0
         for i in range(n):
-                for j in (i+1,n):
+                for j in range(i+1,n):
                         if(gcdVal(a[i], a[j])):
                                 print(sum)
                                 sum = sum + (a[i] * a[j])
