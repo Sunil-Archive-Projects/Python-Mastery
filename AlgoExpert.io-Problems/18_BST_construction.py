@@ -41,9 +41,7 @@ def contains(root, searchVal):
 
 
 """
-Needs better understanding.
-Do it on pen and paper first.
-Refer Youtube too.
+
 """
 def remove(root, deleteVal, parentNode=None):
     currentNode = root
