@@ -85,18 +85,27 @@ print('*'*10)
 preOrderTraversal_iterative(root)
 
 def postOrderTraversal_iterative(root):
-    stack = []
+    s1 = []
+    s2 = []
 
-    while True:
-        if root:
-            stack.append(root)
-            root = root.left
-        elif stack:
-            root = stack.pop()
-            print(root.data)
-            root = root.right
-        else:
-            break
+    while s1:
+            
+        # Pop an item from s1 and 
+        # append it to s2
+        node = s1.pop()
+        s2.append(node)
+        
+        # Push left and right children of 
+        # removed item to s1
+        if node.left:
+            s1.append(node.left)
+        if node.right:
+            s1.append(node.right)
+
+    # Print all elements of second stack
+    while s2:
+        node = s2.pop()
+        print(node.data)
+
 print('*'*10)
 postOrderTraversal_iterative(root)
-        
