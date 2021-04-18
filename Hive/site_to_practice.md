@@ -1,1 +1,0 @@
-https://demo.gethue.com/hue/editor/?type=6
